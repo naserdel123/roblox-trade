@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تريدات روبلوكس - إنشاء حساب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    
+    <div class="signup-container">
+        <div class="logo-section">
+            <h1 class="site-title">إنشاء حساب جديد</h1>
+        </div>
+
+        <form class="signup-form" id="signupForm">
+            <!-- رفع صورة الأفتار -->
+            <div class="avatar-upload">
+                <div class="avatar-preview" id="avatarPreview">
+                    <span class="upload-icon">📷</span>
+                    <span class="upload-text">اختر صورة الأفتار</span>
+                </div>
+                <input type="file" id="avatarInput" accept="image/*" hidden>
+                <label for="avatarInput" class="upload-btn">اختيار صورة</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="newUsername" required placeholder=" ">
+                <label for="newUsername">اسم المستخدم</label>
+                <div class="input-line"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">البريد الإلكتروني</label>
+                <div class="input-line"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="newPassword" required placeholder=" ">
+                <label for="newPassword">كلمة المرور</label>
+                <div class="input-line"></div>
+            </div>
+
+            <button type="submit" class="signup-btn">
+                <span class="btn-text">إنشاء الحساب</span>
+                <div class="btn-shine"></div>
+            </button>
+        </form>
+
+        <a href="index.html" class="back-link">← العودة لتسجيل الدخول</a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

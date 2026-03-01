@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تريدات روبلوكس - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Roblox_logo.svg" alt="Logo" class="nav-logo">
+            <span>تريدات روبلوكس</span>
+        </div>
+        <div class="nav-user">
+            <img id="userAvatar" src="" alt="Avatar" class="user-avatar">
+            <span id="userName">المستخدم</span>
+            <button onclick="logout()" class="logout-btn">خروج</button>
+        </div>
+    </nav>
+
+    <!-- زر النشر العائم -->
+    <button class="fab" onclick="openModal()" title="نشر تريد جديد">
+        <span class="fab-icon">+</span>
+        <div class="fab-ripple"></div>
+    </button>
+
+    <!-- نموذج النشر -->
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>نشر تريد جديد</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <form id="postForm" class="post-form">
+                <div class="form-section">
+                    <h3>🎮 العنصر المعروض</h3>
+                    <div class="image-upload" id="itemImageUpload">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📸</span>
+                            <span>صورة العنصر</span>
+                        </div>
+                        <input type="file" id="itemImage" accept="image/*" required hidden>
+                    </div>
+                    <input type="text" id="itemName" placeholder="اسم العنصر" required>
+                </div>
+
+                <div class="exchange-arrow">⇄</div>
+
+                <div class="form-section">
+                    <h3>🎯 المقابل المطلوب</h3>
+                    <div class="image-upload" id="tradeImageUpload">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">🎁</span>
+                            <span>صورة المقابل</span>
+                        </div>
+                        <input type="file" id="tradeImage" accept="image/*" required hidden>
+                    </div>
+                    <input type="text" id="tradeName" placeholder="اسم المقابل" required>
+                </div>
+
+                <div class="form-section tiktok-section">
+                    <h3>📱 رابط TikTok</h3>
+                    <input type="url" id="tiktokLink" placeholder="https://www.tiktok.com/@username" required>
+                    <p class="hint">سيتم إضافة زر TikTok للتواصل معك</p>
+                </div>
+
+                <button type="submit" class="publish-btn">
+                    <span>نشر التريد</span>
+                    <div class="btn-shine"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- قائمة المنشورات -->
+    <main class="feed-container" id="feedContainer">
+        <!-- سيتم إضافة المنشورات هنا ديناميكياً -->
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
